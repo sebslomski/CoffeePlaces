@@ -1,0 +1,58 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Bounds Box</title>
+<script type="text/javascript"src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript">
+      function initialize() {
+        ne = new google.maps.LatLng(
+        48.167366302103154,
+        11.596930917224086
+        );
+        sw = new google.maps.LatLng(
+        48.15603046534444,
+        11.548007424792445
+        );
+
+
+        var options = {
+          center: ne,
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"), options);
+
+
+        var viewportPoints = [
+            ne, new google.maps.LatLng(ne.lat(), sw.lng()),
+            sw, new google.maps.LatLng(sw.lat(), ne.lng()), ne
+        ];
+
+        viewportBox = new google.maps.Polyline({
+            path: viewportPoints,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 4 
+        });
+        viewportBox.setMap(map);
+
+        can = new google.maps.LatLng(
+        48.16032,
+        11.563909999999964
+        );
+        new google.maps.Marker({
+          position: can,
+          map: map
+        });
+
+        console.log(
+          can.lat() < ne.lat() && can.lat() > sw.lat() && can.lng() < ne.lng() && can.lng() < sw.lng()
+        );
+      };
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:100%;"></div>
+  <div id="info></div>
+</body>
+</html>

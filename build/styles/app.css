@@ -1,0 +1,544 @@
+/*
+ * Layout CSS selectors always start with `l-`
+ * */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+
+  background: #2c2d2d;
+  background: -webkit-linear-gradient(top, #494a49, #2c2d2d);
+  background: -moz-linear-gradient(top, #494a49, #2c2d2d);
+  background: -ms-linear-gradient(top, #494a49, #2c2d2d);
+  background: -o-linear-gradient(top, #494a49, #2c2d2d);
+  background: linear-gradient(top, #494a49, #2c2d2d);
+}
+
+header > .content {
+  position: absolute;
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #555;
+}
+
+header > .content > h1 {
+  float: left;
+  margin: 0;
+  padding: 13px 20px;
+
+  color: #eee;
+  font-size: 24px;
+  line-height: 1;
+}
+
+header > .content > nav {
+  float: right;
+}
+
+header > .content > nav li {
+  float: left;
+  border-left: 1px solid #222;
+}
+
+header > .content > nav li > a {
+  float: left;
+  display: block;
+  padding: 16px 15px;
+
+  border-left: 1px solid #555;
+
+  font-size: 18px;
+  text-decoration: none;
+  color: #eee;
+}
+
+header > .content > nav li.active > a,
+header > .content > nav li > a:hover {
+  background: #333;
+}
+
+
+header > aside {
+  width: 300px;
+  float: left;
+  height: 100%;
+  padding: 10px 20px;
+
+  border-right: 1px solid #222;
+}
+
+header > aside input[type='text'] {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+#content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content > aside {
+  width: 300px;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 20;
+  position: relative;
+
+  border-right: 1px solid #ccc;
+
+  background: #fff;
+}
+
+#content > aside > ul > li {
+  padding: 10px 20px;
+
+  border-bottom: 1px solid #ccc;
+
+  cursor: pointer;
+}
+
+#content #map {
+  position: absolute;
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#aside-popup {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  width: 400px;
+  z-index: 10;
+  left: -100px;
+
+  background: #ddd;
+}
+
+
+#aside-popup .content {
+  padding: 20px;
+}
+
+#aside-popup-close {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  padding: 10px;
+
+  text-decoration: none;
+  line-height: 1;
+  font-size: 20px;
+  font-family: 'Arial';
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+@-webkit-keyframes slideIn {
+  0% {
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    z-index: 10;
+    width: 370px;
+
+    box-shadow: 0 0 5px #000;
+  }
+  70% {
+    top: 10px;
+    bottom: 10px;
+    left: 320px;
+    z-index: 10;
+    width: 380px;
+
+    box-shadow: 0 0 30px #000;
+  }
+  71% {
+    top: 10px;
+    bottom: 10px;
+    left: 320px;
+    z-index: 30;
+    width: 380px;
+
+    box-shadow: 0 0 30px #000;
+  }
+  100% {
+    top: 10px;
+    bottom: 10px;
+    left: 270px;
+    z-index: 30;
+    width: 400px;
+
+    box-shadow: 0 0 5px #000;
+  }
+}
+
+.slideIn {
+  -webkit-animation: slideIn 0.2s linear both;
+}
+/*
+ * Only HTML elements as css selectors
+ * */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+
+  color: #525252;
+  font-size: 16px;
+  line-height: 2;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+h1, h2, h3, h4 {
+  margin: 20px 0 10px;
+
+  color: #222;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  margin-bottom: 0;
+
+  font-size: 20px;
+}
+
+h3 {
+  margin-bottom: 0;
+
+  font-size: 18px;
+}
+
+h4 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  float: left;
+  margin: 10px 0;
+  padding-right: 30px;
+}
+
+input, textarea {
+  padding: 5px;
+
+  border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 1px 1px #a5a5a5;
+  -moz-box-shadow: inset 0px 1px 1px #a5a5a5;
+  -o-box-shadow: inset 0px 1px 1px #a5a5a5;
+  -ms-box-shadow: inset 0px 1px 1px #a5a5a5;
+  box-shadow: inset 0px 1px 1px #a5a5a5;
+
+  background: #e7e7e7;
+
+  font-size: 16px;
+}
+
+input:focus, textarea:focus {
+  background: #fff;
+
+  outline: none;
+}
+
+a {
+  color: #369;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+acronym {
+  cursor: help;
+  border-bottom: 1px dotted #c0c0c0;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+.bar {
+  background: #222;
+
+  color: #eee;
+}
+
+.bar-fixed {
+  position: fixed;
+}
+
+.bar-links {
+  width: 500px;
+  margin-right: 0;
+}
+
+.bar ul {
+  margin: 0;
+}
+
+.bar ul li {
+  list-style: none;
+  margin: 0;
+}
+
+.bar a {
+  color: #777;
+  text-decoration: none;
+  line-height: 1;
+  outline: 0;
+}
+
+.bar a:hover,
+.bar a.s-active {
+  color: #eee;
+}
+
+.bar a.s-active {
+  border-bottom: 2px solid #eee;
+  margin-bottom: 1px;
+}
+
+
+.bar-logo h1 {
+  float: left;
+  margin: 0;
+  padding: 15px 0;
+
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.bar-logo h1 a {
+  color: #eee;
+}
+
+
+.bar-logo h1 span {
+  line-height: 1;
+  font-size: 16px;
+  color: #777;
+}
+
+.bar-menu {
+  float: right;
+}
+
+.bar-menu li {
+  float: left;
+}
+
+.bar-menu li a {
+  display: block;
+  padding: 16px 10px;
+  padding-top: 29px;
+
+  font-family: 'Helvetica', sans-serif;
+  font-size: 14px;
+}
+
+
+.bar-social {
+  float: right;
+}
+
+.bar-social li {
+  float: left;
+}
+
+.bar-social li a {
+  width: 14px;
+  height: 14px;
+  display: block;
+  margin: 16px 10px;
+  margin-top: 24px;
+
+  background: #fff;
+
+  text-indent: -999em;
+}
+
+.bar-separator {
+  float: right;
+  height: 20px;
+  width: 1px;
+  margin: 13px 10px;
+  margin-top: 21px;
+
+  background: #777;
+}
+
+
+.bar-copyright {
+  padding: 20px 0;
+  display: block;
+}
+#splash-screen-view {
+  float: left;
+  height: 100%;
+  width: 100%;
+
+  background: #696265;
+}
+
+#splash-screen-loader {
+  width: 150px;
+  height: 150px;
+  margin: 20% auto;
+  display: block;
+}
+#browser-fail {
+  display: none;
+}
+
+.alert-box {
+  padding: 8px 35px 8px 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  border: 1px solid #FBEED5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+
+  background-color: #FCF8E3;
+}
+
+.alert-box h4 {
+  margin: 0;
+
+  color: #C09853;
+}
+
+.alert-box p {
+  margin: 0;
+
+  color: #C09853;
+}
+
+a.alert-close  {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  float: right;
+
+  color: #bbb;
+  text-shadow: 0 1px 0 white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  line-height: 18px;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+

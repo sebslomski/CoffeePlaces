@@ -1,0 +1,25 @@
+<header>
+  <aside>
+    <input type="text" id="search" placeholder="Search, e.g. 'München'">
+  </aside>
+  <div class="content">
+    <h1 class="l-logo">CoffeePlaces</h1>
+    <nav>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="content">
+  <aside>
+    <ul id="venue-list"></ul>
+  </aside>
+  <div id="aside-popup">
+    <a id="aside-popup-close">x</a>
+    <div class="content"></div>
+  </div>
+  <div id="map"></div>
+</div>

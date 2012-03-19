@@ -1,0 +1,14 @@
+#splash-screen-view {
+  float: left;
+  height: 100%;
+  width: 100%;
+
+  background: #696265;
+}
+
+#splash-screen-loader {
+  width: 150px;
+  height: 150px;
+  margin: 20% auto;
+  display: block;
+}

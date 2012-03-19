@@ -1,0 +1,2 @@
+<h3><%= @venue.get('name') %></h3>
+<%= @venue.get('location').address %>

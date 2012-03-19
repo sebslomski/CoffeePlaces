@@ -1,0 +1,194 @@
+/*
+ * Layout CSS selectors always start with `l-`
+ * */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+
+  background: #2c2d2d;
+  background: -webkit-linear-gradient(top, #494a49, #2c2d2d);
+  background: -moz-linear-gradient(top, #494a49, #2c2d2d);
+  background: -ms-linear-gradient(top, #494a49, #2c2d2d);
+  background: -o-linear-gradient(top, #494a49, #2c2d2d);
+  background: linear-gradient(top, #494a49, #2c2d2d);
+}
+
+header > .content {
+  position: absolute;
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #555;
+}
+
+header > .content > h1 {
+  float: left;
+  margin: 0;
+  padding: 13px 20px;
+
+  color: #eee;
+  font-size: 24px;
+  line-height: 1;
+}
+
+header > .content > nav {
+  float: right;
+}
+
+header > .content > nav li {
+  float: left;
+  border-left: 1px solid #222;
+}
+
+header > .content > nav li > a {
+  float: left;
+  display: block;
+  padding: 16px 15px;
+
+  border-left: 1px solid #555;
+
+  font-size: 18px;
+  text-decoration: none;
+  color: #eee;
+}
+
+header > .content > nav li.active > a,
+header > .content > nav li > a:hover {
+  background: #333;
+}
+
+
+header > aside {
+  width: 300px;
+  float: left;
+  height: 100%;
+  padding: 10px 20px;
+
+  border-right: 1px solid #222;
+}
+
+header > aside input[type='text'] {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+#content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content > aside {
+  width: 300px;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 20;
+  position: relative;
+
+  border-right: 1px solid #ccc;
+
+  background: #fff;
+}
+
+#content > aside > ul > li {
+  padding: 10px 20px;
+
+  border-bottom: 1px solid #ccc;
+
+  cursor: pointer;
+}
+
+#content #map {
+  position: absolute;
+  left: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#aside-popup {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  width: 400px;
+  z-index: 10;
+  left: -100px;
+
+  background: #ddd;
+}
+
+
+#aside-popup .content {
+  padding: 20px;
+}
+
+#aside-popup-close {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  padding: 10px;
+
+  text-decoration: none;
+  line-height: 1;
+  font-size: 20px;
+  font-family: 'Arial';
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+@-webkit-keyframes slideIn {
+  0% {
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    z-index: 10;
+    width: 370px;
+
+    box-shadow: 0 0 5px #000;
+  }
+  70% {
+    top: 10px;
+    bottom: 10px;
+    left: 320px;
+    z-index: 10;
+    width: 380px;
+
+    box-shadow: 0 0 30px #000;
+  }
+  71% {
+    top: 10px;
+    bottom: 10px;
+    left: 320px;
+    z-index: 30;
+    width: 380px;
+
+    box-shadow: 0 0 30px #000;
+  }
+  100% {
+    top: 10px;
+    bottom: 10px;
+    left: 270px;
+    z-index: 30;
+    width: 400px;
+
+    box-shadow: 0 0 5px #000;
+  }
+}
+
+.slideIn {
+  -webkit-animation: slideIn 0.2s linear both;
+}

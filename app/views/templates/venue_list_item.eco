@@ -1,0 +1,5 @@
+<li id="venue-<%= @model.id %>">
+  <%= @model.get('name') %>
+  <br>
+  <%= @model.get('location').address %>
+</li>
